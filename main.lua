@@ -6,6 +6,8 @@
     require "my_bdd/ennemies_db"
     require "scripts/player"
     require "scripts/ennemy"
+    require "scripts/inventaire"
+    require "scripts/combat"
     require "math"
 
 
@@ -17,6 +19,13 @@
 
         choix_UI = 1 --Choix interface
         interface_state = "" -- State pour manipuler l'inventaire et les skills
+
+         -- var pour le tour par tour du combat
+         i = 1
+         j = 2
+         my_turn = 1
+         --randomNumber(i, j)
+         ----------------------------------------
 
 
         -- Creation du player par défaut en arrière plan
@@ -32,6 +41,8 @@
         EnnemyCreation()
         ----------------------
 
+        inventory_Init()
+
 
         interface_init() -- Initialisation des menus
 
@@ -46,6 +57,8 @@
 
         ui_Combat_Update()
 
+        EnCombat(dt)
+
     end
 
 
@@ -57,8 +70,10 @@
             draw_Ui_Player_Selection()
         elseif choix_UI == 3 and interface_state == "in_combat"  then -- Interface de combat simple
             draw_Ui_Combat()
-        elseif choix_UI == 3 and interface_state == "in_inventaire"  then -- Interface de combat + affichage inventaire
+        elseif choix_UI == 3 and interface_state == "in_inventory"  then -- Interface de combat + affichage inventaire
             draw_Ui_Combat()
+            draw_Inventory()
+            
             -- Ajout dessin de l'inventaire
         elseif choix_UI == 3 and interface_state == "in_skill"  then -- Interface de combat + affichage skill
             draw_Ui_Combat()
