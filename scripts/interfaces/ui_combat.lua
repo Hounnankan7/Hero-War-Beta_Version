@@ -113,6 +113,10 @@
         ui_combat_ennemy.defense = "DEF: "..ennemie.defense_point.."/"..ennemie.max_defense_point
         ui_combat_ennemy.exp_loot = "EXP LOOT: "..ennemie.exp_loot
 
+        --Bouton inventaire
+        love.graphics.print("x"..nbr_item.stone, 22*tileSize, 43*tileSize)
+        love.graphics.print("x"..nbr_item.gift, 26*tileSize, 43*tileSize)
+
 
 
     end
@@ -177,10 +181,13 @@
         love.graphics.draw(ui_inventaire.projectile, 22.2*tileSize, 40*tileSize)
         love.graphics.draw(ui_inventaire.gift, 26.1*tileSize, 40*tileSize)
         love.graphics.setFont(font_quard)
-        love.graphics.print("HP+", 14*tileSize, 38.8*tileSize)
-        love.graphics.print("Tp+", 18*tileSize, 38.8*tileSize)
+        love.graphics.print("HP +", 14*tileSize, 38.8*tileSize)
+        love.graphics.print("Tp +", 18*tileSize, 38.8*tileSize)
         love.graphics.print("Throw", 22*tileSize, 38.8*tileSize)
         love.graphics.print("Gift", 26*tileSize, 38.8*tileSize)
+
+        love.graphics.print("x "..nbr_item.stone, 22*tileSize, 43*tileSize)
+        love.graphics.print("x "..nbr_item.gift, 26*tileSize, 43*tileSize)
 
 
 

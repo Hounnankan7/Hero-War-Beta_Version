@@ -55,6 +55,8 @@
 
         choix_UI = manipulationInterface(choix_UI, dt) -- Réaction en fonction des boutons cliqués
 
+        inventory_Update(dt)
+
         ui_Combat_Update()
 
         EnCombat(dt)
@@ -73,8 +75,6 @@
         elseif choix_UI == 3 and interface_state == "in_inventory"  then -- Interface de combat + affichage inventaire
             draw_Ui_Combat()
             draw_Inventory()
-            
-            -- Ajout dessin de l'inventaire
         elseif choix_UI == 3 and interface_state == "in_skill"  then -- Interface de combat + affichage skill
             draw_Ui_Combat()
             -- Ajout dessin des skills
