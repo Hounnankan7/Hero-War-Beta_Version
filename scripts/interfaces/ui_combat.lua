@@ -41,37 +41,18 @@
         ui_action.normal_attack = love.graphics.newImage("assets/icons/actions/sword.png")
         ui_action.skill = love.graphics.newImage("assets/icons/actions/skill.png")
        
-        if choix_character == 1 then
-            ui_action.skill_1 = love.graphics.newImage("assets/icons/actions/swordman_skill/skill_1.png")
-            ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/swordman_skill/skill_2.png")
-            ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/swordman_skill/skill_3.png")
-            ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/swordman_skill/skill_4.png")
-        elseif choix_character == 2 then
-            ui_action.skill_1 = love.graphics.newImage("assets/icons/actions/spearman_skill/skill_1.png")
-            ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/spearman_skill/skill_2.png")
-            ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/spearman_skill/skill_3.png")
-            ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/spearman_skill/skill_4.png")
-        elseif choix_character == 3 then
-            ui_action.skill_1 = love.graphics.newImage("assets/icons/actions/gunner_skill/skill_1.png")
-            ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/gunner_skill/skill_2.png")
-            ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/gunner_skill/skill_3.png")
-            ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/gunner_skill/skill_4.png")
-        elseif choix_character == 4 then
-            ui_action.skill_1 = love.graphics.newImage("assets/icons/actions/ninja_skill/skill_1.png")
-            ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/ninja_skill/skill_2.png")
-            ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/ninja_skill/skill_3.png")
-            ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/ninja_skill/skill_4.png")
-        elseif choix_character == 5 then
-            ui_action.skill_1 = love.graphics.newImage("assets/icons/actions/samurai_skill/skill_1.png")
-            ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/samurai_skill/skill_2.png")
-            ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/samurai_skill/skill_3.png")
-            ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/samurai_skill/skill_4.png")
-        elseif choix_character == 6 then
-            ui_action.skill_1 = love.graphics.newImage("assets/icons/actions/spiritualist_skill/skill_1.png")
-            ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/spiritualist_skill/skill_2.png")
-            ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/spiritualist_skill/skill_3.png")
-            ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/spiritualist_skill/skill_4.png")
-        end
+        ui_action.skill_1 = love.graphics.newImage("assets/icons/actions/swordman_skill/skill_1.png")
+        ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/swordman_skill/skill_2.png")
+        ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/swordman_skill/skill_3.png")
+        ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/swordman_skill/skill_4.png")
+        ui_action.skill_1_name = ""
+        ui_action.skill_2_name = ""
+        ui_action.skill_3_name = ""
+        ui_action.skill_4_name = ""
+        ui_action.consoTP_1 = ""
+        ui_action.consoTP_2 = ""
+        ui_action.consoTP_3 = ""
+        ui_action.consoTP_4 = ""
         
         ui_action.defense = love.graphics.newImage("assets/icons/actions/shield.png")
         ui_action.run = love.graphics.newImage("assets/icons/actions/run.png")

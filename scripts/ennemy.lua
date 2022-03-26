@@ -72,7 +72,9 @@
 
     end
 
-    function EnnemyAI()
+    function EnnemyAI(dt, action_choice)
+
+        action_choice = randomNumber(c, d)
         
     end
 

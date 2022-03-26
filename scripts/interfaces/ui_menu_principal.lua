@@ -57,7 +57,7 @@
             if mousePosY >= 17 and mousePosY <= 20 and mousePosX >= 16 and mousePosX <= 41 then -- Clique sur Nouvelle bataille
                 
                 interface_choice = 2
-                delay_s(0.9)
+                delay_s(1.1)
 
             elseif mousePosY >= 21 and mousePosY <= 24 and mousePosX >= 16 and mousePosX <= 41 then -- Clique sur Dernière bataille
                 

@@ -8,6 +8,7 @@
     require "scripts/ennemy"
     require "scripts/inventaire"
     require "scripts/combat"
+    require "scripts/skill"
     require "math"
 
 
@@ -39,7 +40,12 @@
         b = 100
         monster_choice = randomNumber(a, b)
         EnnemyCreation()
+        --var choix d'action de l'ennemy---
+        c = 1
+        d = 8
+        action_choice = 1
         ----------------------
+        --------------------------------------------------
 
         inventory_Init()
 
@@ -77,7 +83,7 @@
             draw_Inventory()
         elseif choix_UI == 3 and interface_state == "in_skill"  then -- Interface de combat + affichage skill
             draw_Ui_Combat()
-            -- Ajout dessin des skills
+            draw_Skill()
         elseif choix_UI == 4 then -- Interface Victoire
             draw_Ui_Victory()
         elseif choix_UI == 5 then -- Interface Defaite

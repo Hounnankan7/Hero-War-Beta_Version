@@ -3,6 +3,7 @@
     require "settings"
     require "my_bdd/character_db"
     require "my_bdd/ennemies_db"
+    require "scripts/skill"
 
 
 
@@ -192,6 +193,7 @@
                 PlayerCreation()
                 EnnemyCreation()
                 interface_state = "in_combat"
+                skill_Update()
                 interface_choice = 3
                 delay_s(0.9)
 
@@ -201,6 +203,7 @@
                 PlayerCreation()
                 EnnemyCreation()
                 interface_state = "in_combat"
+                skill_Update()
                 interface_choice = 3
                 delay_s(0.9)
 
@@ -210,6 +213,7 @@
                 PlayerCreation()
                 EnnemyCreation()
                 interface_state = "in_combat"
+                skill_Update()
                 interface_choice = 3
                 delay_s(0.9)
 
@@ -219,6 +223,7 @@
                 PlayerCreation()
                 EnnemyCreation()
                 interface_state = "in_combat"
+                skill_Update()
                 interface_choice = 3
                 delay_s(0.9)
 
@@ -228,6 +233,7 @@
                 PlayerCreation()
                 EnnemyCreation()
                 interface_state = "in_combat"
+                skill_Update()
                 interface_choice = 3
                 delay_s(0.9)
 
@@ -237,6 +243,7 @@
                 PlayerCreation()
                 EnnemyCreation()
                 interface_state = "in_combat"
+                skill_Update()
                 interface_choice = 3
                 delay_s(0.9)
         
