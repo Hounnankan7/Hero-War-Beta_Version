@@ -3,6 +3,33 @@
     require "scripts/interfaces/ui_combat"
 
 
+---------------------------------------------------------------------------------------------
+--FONCTIONS D'UTILISATION DES SKILLS
+    function player_Normal_Attack(dt) -- Fonction utilisation d'une attaque normale
+        
+    end
+
+    function player_Use_Skill_1(dt, choix_character) -- Fonction d'utilisation du skill 1 
+        
+    end
+
+    function player_Use_Skill_2(dt, choix_character) -- Fonction d'utilisation du skill 2
+        
+    end
+
+    function player_Use_Skill_3(dt, choix_character) -- Fonction d'utilisation du skill 3
+        
+    end
+
+    function player_Use_Skill_4(dt, choix_character) -- Fonction d'utilisation du skill 4
+        
+    end
+
+    function player_Use_Defend(dt) -- Player utilise defense pour augmenter de x ca defense
+        
+    end
+---------------------------------------------------------------------------------------------
+
 function skill_Update()
 
     if choix_character == 1 then
@@ -11,9 +38,9 @@ function skill_Update()
         ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/swordman_skill/skill_3.png")
         ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/swordman_skill/skill_4.png")
         ui_action.skill_1_name = "SLASH"
-        ui_action.skill_2_name = ""
-        ui_action.skill_3_name = ""
-        ui_action.skill_4_name = ""
+        ui_action.skill_2_name = "AURA SWORD"
+        ui_action.skill_3_name = "SUPER AURA SWORD"
+        ui_action.skill_4_name = "PRIME CIRCLE SWORD"
         ui_action.consoTP_1 = "-50TP"
         ui_action.consoTP_2 = ""
         ui_action.consoTP_3 = ""
@@ -23,10 +50,10 @@ function skill_Update()
         ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/spearman_skill/skill_2.png")
         ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/spearman_skill/skill_3.png")
         ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/spearman_skill/skill_4.png")
-        ui_action.skill_1_name = ""
-        ui_action.skill_2_name = ""
-        ui_action.skill_3_name = ""
-        ui_action.skill_4_name = ""
+        ui_action.skill_1_name = "SHADOW SPEAR"
+        ui_action.skill_2_name = "SHADOW VEIL"
+        ui_action.skill_3_name = "SHADOW BOMB"
+        ui_action.skill_4_name = "SHADOW TORNADO"
         ui_action.consoTP_1 = ""
         ui_action.consoTP_2 = ""
         ui_action.consoTP_3 = ""
@@ -49,10 +76,10 @@ function skill_Update()
         ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/ninja_skill/skill_2.png")
         ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/ninja_skill/skill_3.png")
         ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/ninja_skill/skill_4.png")
-        ui_action.skill_1_name = ""
-        ui_action.skill_2_name = ""
-        ui_action.skill_3_name = ""
-        ui_action.skill_4_name = ""
+        ui_action.skill_1_name = "WIND EXPLOSION"
+        ui_action.skill_2_name = "TRIPPLE WIND EXPLOSION"
+        ui_action.skill_3_name = "ELECTRO BOMB"
+        ui_action.skill_4_name = "WIND TORNADO"
         ui_action.consoTP_1 = ""
         ui_action.consoTP_2 = ""
         ui_action.consoTP_3 = ""

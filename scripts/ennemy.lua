@@ -75,7 +75,50 @@
     function EnnemyAI(dt, action_choice)
 
         action_choice = randomNumber(c, d)
+
+        if action_choice >= 1 and action_choice <= 5 then
+            ennemy_Normal_Attack(dt)
+        elseif action_choice >= 6 and action_choice <= 8 then
+            ennemy_Critical_Attack(dt)
+        elseif action_choice >= 9 and action_choice <= 11 then
+            ennemy_Special_Attack(dt)
+        elseif action_choice >= 12 and action_choice <= 13 then
+            ennemy_Defend(dt)
+        elseif action_choice == 14 then
+            ennemy_Rage(dt)
+        elseif action_choice == 15 then
+            ennemy_Regeneration(dt)
+        end
         
     end
+
+    ----------------------------------------------------------------------------------------
+    --ENNEMY ACTION POSSIBLE
+        
+        function ennemy_Normal_Attack(dt) -- Attack normal de l'ennemie
+            
+        end
+
+        function ennemy_Special_Attack(dt) -- Special attack ennemie 
+            
+        end
+
+        function ennemy_Critical_Attack(dt) -- Ennemy Critical Hit
+            
+        end
+
+        function ennemy_Defend(dt) -- Ennemy Defend
+            
+        end
+
+        function ennemy_Rage(dt) -- Ennemy Rage to add ATK Power
+            
+        end
+
+        function ennemy_Regeneration(dt) -- Ennemy regenerate little health
+            
+        end
+
+    ----------------------------------------------------------------------------------------
 
 ---------------------------------------------------------------------------------------------

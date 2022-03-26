@@ -42,6 +42,7 @@ function inventory_Init()
     
 end
 
+
 function inventory_Update(dt)
 
     love.graphics.print("x"..nbr_item.hp20, 17*tileSize, 29*tileSize)
@@ -55,6 +56,51 @@ function inventory_Update(dt)
     love.graphics.print("x"..nbr_item.mp300, 25*tileSize, 38*tileSize)
 
 end
+
+---------------------------------------------------------------------------------------------
+--LES FONCTIONS D'UTILISATIONS DES DIFFERENTS ITEMS
+
+    function use_hp20(dt)
+        
+    end
+
+    function use_hp200(dt)
+        
+    end
+
+    function use_hp300(dt)
+        
+    end
+
+    function use_hp500(dt)
+        
+    end
+
+    function use_mp20(dt)
+        
+    end
+
+    function use_mp150(dt)
+        
+    end
+
+    function use_mp250(dt)
+        
+    end
+
+    function use_mp300(dt)
+        
+    end
+
+    function use_stone(dt)
+        
+    end
+
+    function use_gift(dt)
+        
+    end
+
+---------------------------------------------------------------------------------------------
 
 function draw_Inventory()
 
