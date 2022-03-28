@@ -6,7 +6,7 @@
 
 --LES VARIABLES------------------------------------------------------------------------------
 
-
+damage_to_player = 0
 
 ---------------------------------------------------------------------------------------------
 
@@ -16,7 +16,7 @@
 
     function EnnemyCreation() --Fonction d'initialisation du perso du player
 
-        if player.level >= 1 and player.level <= 15 then
+        if player.level >= 1 and player.level <= 15 then 
             a = 1
             b = 18
             monster_choice = randomNumber(a, b)
@@ -96,26 +96,137 @@
     --ENNEMY ACTION POSSIBLE
         
         function ennemy_Normal_Attack(dt) -- Attack normal de l'ennemie
-            
+            if player.health_point >= 1 and player.health_point <= player.max_health_point then
+
+                damage_to_player = (ennemie.attack_point * (100/(100 + player.defense_point)))
+                player.health_point = math.floor((player.health_point - damage_to_player))
+                ui_text.action = "Ennemy deal "..damage_to_player.." damage to Player"
+                delay_s(0.5) 
+                my_turn = 1
+
+            elseif player.health_point <= 0 then
+                
+            end
         end
 
-        function ennemy_Special_Attack(dt) -- Special attack ennemie 
+        function ennemy_Special_Attack(dt) -- Special attack ennemie
+            
+            if player.health_point >= 1 and player.health_point <= player.max_health_point then
+
+                damage_to_player = (ennemie.attack_point * (100/(100 + player.defense_point))) + 10
+                player.health_point = math.floor((player.health_point - damage_to_player))
+                ui_text.action = "Ennemy use special skill to deal "..damage_to_player.." damage to Player"
+                delay_s(0.5) 
+                my_turn = 1
+        
+            elseif player.health_point <= 0 then
+                
+            end
             
         end
 
         function ennemy_Critical_Attack(dt) -- Ennemy Critical Hit
             
+            if player.health_point >= 1 and player.health_point <= player.max_health_point then
+
+                damage_to_player = (ennemie.attack_point * (100/(100 + player.defense_point))) + 4
+                player.health_point = math.floor((player.health_point - damage_to_player))
+                ui_text.action = "Ennemy deal "..damage_to_player.." critical damage to Player"
+                delay_s(0.5) 
+                my_turn = 1
+        
+            elseif player.health_point <= 0 then
+                
+            end
+
         end
 
         function ennemy_Defend(dt) -- Ennemy Defend
+
+            if ennemie.defense_point < ennemie.max_defense_point then
+
+                if ennemie.defense_point + 10 < ennemie.max_defense_point then
+
+                    ennemie.defense_point = math.floor((ennemie.defense_point + 10 ) )
+                    ui_text.action = "Ennemy defence + 10"
+                    delay_s(0.5) 
+                    my_turn = 1
+
+                elseif ennemie.defense_point + 10 >= ennemie.max_defense_point then
+                    
+                    ennemie.defense_point = ennemie.max_defense_point
+                    ui_text.action = "Ennemy defence + 10 and is at max"
+                    delay_s(0.5) 
+                    my_turn = 1
+
+                end
+                
+            elseif ennemie.defense_point > ennemie.max_defense_point then
+
+                ennemie.defense_point = ennemie.max_defense_point
+                ui_text.action = "Ennemy defence is at max"
+    
+            end
             
         end
 
         function ennemy_Rage(dt) -- Ennemy Rage to add ATK Power
+
+            if ennemie.attack_point < ennemie.max_attack_point then
+                if ennemie.attack_point + 5 < ennemie.max_attack_point then
+
+                    ennemie.attack_point = math.floor((ennemie.attack_point + 10 ))
+                    ui_text.action = "Ennemy use Rage to increase attack + 10"
+                    delay_s(0.5) 
+                    my_turn = 1
+
+                elseif ennemie.attack_point + 5 > ennemie.max_attack_point then
+                    
+                    ennemie.attack_point = ennemie.max_attack_point
+                    ennemie.health_point = math.floor((ennemie.health_point - 10 ))
+                    ui_text.action = "Ennemy over use Rage and took 10 damage"
+                    delay_s(0.5) 
+                    my_turn = 1    
+
+                end
+            elseif ennemie.attack_point > ennemie.max_attack_point then
+
+                ennemie.attack_point = ennemie.max_attack_point
+                ui_text.action = "Ennemy at the max of ATK"
+                delay_s(0.5) 
+                my_turn = 1
+
+            end
             
         end
 
         function ennemy_Regeneration(dt) -- Ennemy regenerate little health
+
+            if ennemie.health_point < ennemie.max_health_point  then
+                if ennemie.health_point + 100 < ennemie.max_health_point then
+
+                    ennemie.health_point = math.floor( ((ennemie.health_point + 20)) )
+                    ui_text.action = "Ennemy regenerate 100 HP"
+                    delay_s(0.5) 
+                    my_turn = 1
+
+                elseif ennemie.health_point + 100 >= ennemie.max_health_point then
+                   
+                    ennemie.health_point = ennemie.max_health_point
+                    ui_text.action = "Ennemy regenerate 100 HP"
+                    delay_s(0.5) 
+                    my_turn = 1
+
+                end
+            
+            elseif ennemie.health_point >= ennemie.max_health_point then
+
+                ennemie.health_point = ennemie.max_health_point
+                ui_text.action = "Ennemy try to use regeneration with a full life"
+                delay_s(0.5) 
+                my_turn = 1
+
+            end
             
         end
 

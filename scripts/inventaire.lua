@@ -25,8 +25,10 @@ function inventory_Init()
     nbr_item.mp150 = 10
     nbr_item.mp250 = 10
     nbr_item.mp300 = 10
-    nbr_item.stone = 5
+    nbr_item.stone = 2
     nbr_item.gift = 1
+
+    gift_choice = 0
 
     loot_item = {}
     loot_item.hp20 = 0
@@ -61,42 +63,396 @@ end
 --LES FONCTIONS D'UTILISATIONS DES DIFFERENTS ITEMS
 
     function use_hp20(dt)
+
+        if nbr_item.hp20 >= 1 then
+
+            if player.health_point < player.max_health_point then
+
+                if player.health_point + 20 < player.max_health_point then
+
+                    player.health_point = math.floor((player.health_point + 20 ))
+                    nbr_item.hp20 = nbr_item.hp20 - 1 
+                    ui_text.action = "Player HP +20"
+                    delay_s(0.9)
+                    my_turn = 2
+    
+                elseif player.health_point + 20 >= player.max_health_point then
+
+                    player.health_point = player.max_health_point
+                    nbr_item.hp20 = nbr_item.hp20 - 1 
+                    ui_text.action = "Player HP +20"
+                    delay_s(0.9)
+                    my_turn = 2
+     
+                end
+
+            elseif player.health_point >= player.max_health_point then
+
+                player.health_point = player.max_health_point
+                ui_text.action = "Votre vie est deja pleine"
+                delay_s(0.9)
+       
+            end
+
+        elseif nbr_item.hp20 <= 0 then
+
+            nbr_item.hp20 = 0
+            ui_text.action = "Player n'a plus la potion correspondante"
+            delay_s(0.9)
+           
+        end
         
     end
 
     function use_hp200(dt)
+
+        if nbr_item.hp200 >= 1 then
+
+            if player.health_point < player.max_health_point then
+
+                if player.health_point + 200 < player.max_health_point then
+
+                    player.health_point = math.floor((player.health_point + 200 ))
+                    nbr_item.hp20 = nbr_item.hp200 - 1 
+                    ui_text.action = "Player HP +200"
+                    delay_s(0.9)
+                    my_turn = 2
+    
+                elseif player.health_point + 200 >= player.max_health_point then
+
+                    player.health_point = player.max_health_point
+                    nbr_item.hp20 = nbr_item.hp200 - 1 
+                    ui_text.action = "Player HP +200"
+                    delay_s(0.9)
+                    my_turn = 2
+     
+                end
+
+            elseif player.health_point >= player.max_health_point then
+
+                player.health_point = player.max_health_point
+                ui_text.action = "Votre vie est deja pleine"
+                delay_s(0.9)
+       
+            end
+
+            
+        elseif nbr_item.hp200 <= 0 then
+
+            nbr_item.hp200 = 0
+            ui_text.action = "Player n'a plus la potion correspondante"
+            delay_s(0.9)
+                
+        end
+
         
     end
 
     function use_hp300(dt)
+
+        if nbr_item.hp300 >= 1 then
+
+            if player.health_point < player.max_health_point then
+
+                if player.health_point + 300 < player.max_health_point then
+
+                    player.health_point = math.floor((player.health_point + 300 ))
+                    nbr_item.hp20 = nbr_item.hp300 - 1 
+                    ui_text.action = "Player HP +300"
+                    delay_s(0.9)
+                    my_turn = 2
+    
+                elseif player.health_point + 300 >= player.max_health_point then
+
+                    player.health_point = player.max_health_point
+                    nbr_item.hp20 = nbr_item.hp300 - 1 
+                    ui_text.action = "Player HP +300"
+                    delay_s(0.9)
+                    my_turn = 2
+     
+                end
+
+            elseif player.health_point >= player.max_health_point then
+
+                player.health_point = player.max_health_point
+                ui_text.action = "Votre vie est deja pleine"
+                delay_s(0.9)
+       
+            end
+
+            
+        elseif nbr_item.hp300 <= 0 then
+
+            nbr_item.hp300 = 0
+            ui_text.action = "Player n'a plus la potion correspondante"
+            delay_s(0.9)
+                
+        end
+
         
     end
 
     function use_hp500(dt)
+
+        if nbr_item.hp500 >= 1 then
+
+            if player.health_point < player.max_health_point then
+
+                if player.health_point + 500 < player.max_health_point then
+
+                    player.health_point = math.floor((player.health_point + 500 ))
+                    nbr_item.hp20 = nbr_item.hp500 - 1 
+                    ui_text.action = "Player HP +500"
+                    delay_s(0.9)
+                    my_turn = 2
+    
+                elseif player.health_point + 500 >= player.max_health_point then
+
+                    player.health_point = player.max_health_point
+                    nbr_item.hp20 = nbr_item.hp500 - 1 
+                    ui_text.action = "Player HP +500"
+                    delay_s(0.9)
+                    my_turn = 2
+     
+                end
+
+            elseif player.health_point >= player.max_health_point then
+
+                player.health_point = player.max_health_point
+                ui_text.action = "Votre vie est deja pleine"
+                delay_s(0.9)
+       
+            end
+
+            
+        elseif nbr_item.hp500 <= 0 then
+
+            nbr_item.hp500 = 0
+            ui_text.action = "Player n'a plus la potion correspondante"
+            delay_s(0.9)
+                
+        end
+
         
     end
 
     function use_mp20(dt)
+
+        if nbr_item.mp20 >= 1 then
+
+            if player.magic_point < player.max_magic_point then
+
+                if player.magic_point + 20 < player.max_magic_point then
+
+                    player.magic_point = math.floor((player.magic_point + 20))
+                    nbr_item.mp20 = nbr_item.mp20 - 1
+                    ui_text.action = "Player TP +20"
+                    delay_s(0.9)
+                    my_turn = 2    
+
+                elseif player.magic_point + 20 >= player.max_magic_point then
+
+                    player.magic_point = player.max_magic_point
+                    nbr_item.mp20 = nbr_item.mp20 - 1
+                    ui_text.action = "Player TP +20"
+                    delay_s(0.9)
+                    my_turn = 2
+                    
+                end
+            
+            elseif player.magic_point >= player.max_magic_point then
+
+                player.magic_point = player.max_magic_point
+                ui_text.action = "Vos point de technique sont deja pleins"
+                delay_s(0.9)
+    
+            end
+            
+        elseif nbr_item.mp20 <= 0 then
+
+            nbr_item.mp20 = 0
+            ui_text.action = "Player n'a plus la potion correspondante"
+            delay_s(0.9)
+                
+        end
+
         
     end
 
     function use_mp150(dt)
+
+        if nbr_item.mp150 >= 1 then
+
+            if player.magic_point < player.max_magic_point then
+
+                if player.magic_point + 150 < player.max_magic_point then
+
+                    player.magic_point = math.floor((player.magic_point + 150))
+                    nbr_item.mp150 = nbr_item.mp150 - 1
+                    ui_text.action = "Player TP +150"
+                    delay_s(0.9)
+                    my_turn = 2    
+
+                elseif player.magic_point + 150 >= player.max_magic_point then
+
+                    player.magic_point = player.max_magic_point
+                    nbr_item.mp150 = nbr_item.mp150 - 1
+                    ui_text.action = "Player TP +150"
+                    delay_s(0.9)
+                    my_turn = 2
+                    
+                end
+            
+            elseif player.magic_point >= player.max_magic_point then
+
+                player.magic_point = player.max_magic_point
+                ui_text.action = "Vos point de technique sont deja pleins"
+                delay_s(0.9)
+    
+            end
+
+            
+        elseif nbr_item.mp150 <= 0 then
+
+            nbr_item.mp150 = 0
+            ui_text.action = "Player n'a plus la potion correspondante"
+            delay_s(0.9)
+                
+        end
+
         
     end
 
     function use_mp250(dt)
+
+        if nbr_item.mp250 >= 1 then
+
+            if player.magic_point < player.max_magic_point then
+
+                if player.magic_point + 250 < player.max_magic_point then
+
+                    player.magic_point = math.floor((player.magic_point + 250))
+                    nbr_item.mp250 = nbr_item.mp250 - 1
+                    ui_text.action = "Player TP +250"
+                    delay_s(0.9)
+                    my_turn = 2    
+
+                elseif player.magic_point + 250 >= player.max_magic_point then
+
+                    player.magic_point = player.max_magic_point
+                    nbr_item.mp250 = nbr_item.mp250 - 1
+                    ui_text.action = "Player TP +250"
+                    delay_s(0.9)
+                    my_turn = 2
+                    
+                end
+            
+            elseif player.magic_point >= player.max_magic_point then
+
+                player.magic_point = player.max_magic_point
+                ui_text.action = "Vos point de technique sont deja pleins"
+                delay_s(0.9)
+    
+            end
+
+            
+        elseif nbr_item.mp250 <= 0 then
+
+            nbr_item.mp250 = 0
+            ui_text.action = "Player n'a plus la potion correspondante"
+            delay_s(0.9)
+                
+        end
+
         
     end
 
     function use_mp300(dt)
+
+        if nbr_item.mp300 >= 1 then
+
+            if player.magic_point < player.max_magic_point then
+
+                if player.magic_point + 300 < player.max_magic_point then
+
+                    player.magic_point = math.floor((player.magic_point + 300))
+                    nbr_item.mp300 = nbr_item.mp300 - 1
+                    ui_text.action = "Player TP +300"
+                    delay_s(0.9)
+                    my_turn = 2    
+
+                elseif player.magic_point + 300 >= player.max_magic_point then
+
+                    player.magic_point = player.max_magic_point
+                    nbr_item.mp300 = nbr_item.mp300 - 1
+                    ui_text.action = "Player TP +300"
+                    delay_s(0.9)
+                    my_turn = 2
+                    
+                end
+            
+            elseif player.magic_point >= player.max_magic_point then
+
+                player.magic_point = player.max_magic_point
+                ui_text.action = "Vos point de technique sont deja pleins"
+                delay_s(0.9)
+    
+            end
+
+            
+        elseif nbr_item.mp300 <= 0 then
+
+            nbr_item.mp300 = 0
+            ui_text.action = "Player n'a plus la potion correspondante"
+            delay_s(0.9)
+                
+        end
+
         
     end
 
     function use_stone(dt)
+
+        if nbr_item.stone >= 1 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+
+                damage_to_ennemy = (10 * (100/(100 + ennemie.defense_point)))
+                ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                nbr_item.stone = nbr_item.stone - 1
+                ui_text.action = "Player throw a stone to deal "..damage_to_ennemy.." damage to ennemy"
+                delay_s(0.8)  
+                my_turn = 2
+
+            elseif ennemie.health_point <= 0 then
+                
+            end
+            
+        elseif nbr_item.stone <= 0 then
+
+            nbr_item.stone = 0
+            ui_text.action = "Player n'a plus assez de projectile"
+            delay_s(0.9)
+                
+        end
+
         
     end
 
-    function use_gift(dt)
+    function use_gift(dt) -- Revenir pour bien faire le choix du cadeau
+
+        if nbr_item.gift >= 1 then
+
+            gift_choice = randomNumber(1, 2)
+            
+        elseif nbr_item.gift <= 0 then
+
+            nbr_item.gift = 0
+            ui_text.action = "Player n'a plus assez de cadeau à ouvrir"
+            delay_s(0.9)
+                
+        end
+
         
     end
 

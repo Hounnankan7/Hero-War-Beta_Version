@@ -1,6 +1,13 @@
 --Les includes necessaires
 	--Exemple: require "nom_du_fichier"
     require "scripts/interfaces/ui_combat"
+    require "scripts/player"
+
+--LES VARIABLES------------------------------------------------------------------------------
+
+    damage_to_player = 0
+
+---------------------------------------------------------------------------------------------
 
 
 ---------------------------------------------------------------------------------------------
@@ -25,7 +32,7 @@
         
     end
 
-    function player_Use_Defend(dt) -- Player utilise defense pour augmenter de x ca defense
+    function player_Use_Defend(dt) -- Player utilise defense pour augmenter de 5 ca defense
         
     end
 ---------------------------------------------------------------------------------------------
@@ -89,10 +96,10 @@ function skill_Update()
         ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/samurai_skill/skill_2.png")
         ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/samurai_skill/skill_3.png")
         ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/samurai_skill/skill_4.png")
-        ui_action.skill_1_name = ""
-        ui_action.skill_2_name = ""
-        ui_action.skill_3_name = ""
-        ui_action.skill_4_name = ""
+        ui_action.skill_1_name = "SLASH"
+        ui_action.skill_2_name = "AURA SLASH"
+        ui_action.skill_3_name = "ELECTRIC SHOCK"
+        ui_action.skill_4_name = "ELECTRO SLASH"
         ui_action.consoTP_1 = ""
         ui_action.consoTP_2 = ""
         ui_action.consoTP_3 = ""
@@ -102,10 +109,10 @@ function skill_Update()
         ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/spiritualist_skill/skill_2.png")
         ui_action.skill_3 = love.graphics.newImage("assets/icons/actions/spiritualist_skill/skill_3.png")
         ui_action.skill_4 = love.graphics.newImage("assets/icons/actions/spiritualist_skill/skill_4.png")
-        ui_action.skill_1_name = ""
-        ui_action.skill_2_name = ""
-        ui_action.skill_3_name = ""
-        ui_action.skill_4_name = ""
+        ui_action.skill_1_name = "FIRE FIELD"
+        ui_action.skill_2_name = "METEOR"
+        ui_action.skill_3_name = "FIRE BOOST"
+        ui_action.skill_4_name = "HELL FIRE"
         ui_action.consoTP_1 = ""
         ui_action.consoTP_2 = ""
         ui_action.consoTP_3 = ""
