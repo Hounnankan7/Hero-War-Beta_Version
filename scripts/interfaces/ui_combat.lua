@@ -56,6 +56,7 @@
         
         ui_action.defense = love.graphics.newImage("assets/icons/actions/shield.png")
         ui_action.run = love.graphics.newImage("assets/icons/actions/run.png")
+        ui_action.battle_number = battle_number
 
 
         --INVENTAIRE
@@ -98,6 +99,9 @@
         love.graphics.print("x"..nbr_item.stone, 22*tileSize, 43*tileSize)
         love.graphics.print("x"..nbr_item.gift, 26*tileSize, 43*tileSize)
 
+        --LES BOUTONS D'ACTIONS
+        ui_action.battle_number = battle_number
+
 
 
     end
@@ -127,7 +131,7 @@
         --Just the middle rectangle
         love.graphics.rectangle("line", 30*tileSize, 38*tileSize, 64, 64)
         love.graphics.print("BATTLE", 30.2*tileSize, 37*tileSize)
-        love.graphics.print("2", 31.5*tileSize, 39.5*tileSize)
+        love.graphics.print(ui_action.battle_number, 31.5*tileSize, 39.5*tileSize)
 
         --Bouton d'action
         love.graphics.setColor(1, 1, 1)

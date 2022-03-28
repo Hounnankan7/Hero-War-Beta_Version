@@ -59,6 +59,14 @@ function inventory_Update(dt)
 
 end
 
+function loot_Calculation()
+    
+end
+
+function loot_Ajout()
+    
+end
+
 ---------------------------------------------------------------------------------------------
 --LES FONCTIONS D'UTILISATIONS DES DIFFERENTS ITEMS
 
@@ -71,7 +79,8 @@ end
                 if player.health_point + 20 < player.max_health_point then
 
                     player.health_point = math.floor((player.health_point + 20 ))
-                    nbr_item.hp20 = nbr_item.hp20 - 1 
+                    nbr_item.hp20 = nbr_item.hp20 -1 
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player HP +20"
                     delay_s(0.9)
                     my_turn = 2
@@ -79,7 +88,8 @@ end
                 elseif player.health_point + 20 >= player.max_health_point then
 
                     player.health_point = player.max_health_point
-                    nbr_item.hp20 = nbr_item.hp20 - 1 
+                    nbr_item.hp20 = nbr_item.hp20 -1 
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player HP +20"
                     delay_s(0.9)
                     my_turn = 2
@@ -113,7 +123,8 @@ end
                 if player.health_point + 200 < player.max_health_point then
 
                     player.health_point = math.floor((player.health_point + 200 ))
-                    nbr_item.hp20 = nbr_item.hp200 - 1 
+                    nbr_item.hp200 = nbr_item.hp200 -1 
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player HP +200"
                     delay_s(0.9)
                     my_turn = 2
@@ -121,7 +132,8 @@ end
                 elseif player.health_point + 200 >= player.max_health_point then
 
                     player.health_point = player.max_health_point
-                    nbr_item.hp20 = nbr_item.hp200 - 1 
+                    nbr_item.hp200 = nbr_item.hp200 -1 
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player HP +200"
                     delay_s(0.9)
                     my_turn = 2
@@ -157,7 +169,8 @@ end
                 if player.health_point + 300 < player.max_health_point then
 
                     player.health_point = math.floor((player.health_point + 300 ))
-                    nbr_item.hp20 = nbr_item.hp300 - 1 
+                    nbr_item.hp300 = nbr_item.hp300 -1 
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player HP +300"
                     delay_s(0.9)
                     my_turn = 2
@@ -165,7 +178,8 @@ end
                 elseif player.health_point + 300 >= player.max_health_point then
 
                     player.health_point = player.max_health_point
-                    nbr_item.hp20 = nbr_item.hp300 - 1 
+                    nbr_item.hp300 = nbr_item.hp300 -1 
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player HP +300"
                     delay_s(0.9)
                     my_turn = 2
@@ -201,7 +215,8 @@ end
                 if player.health_point + 500 < player.max_health_point then
 
                     player.health_point = math.floor((player.health_point + 500 ))
-                    nbr_item.hp20 = nbr_item.hp500 - 1 
+                    nbr_item.hp500 = nbr_item.hp500 -1 
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player HP +500"
                     delay_s(0.9)
                     my_turn = 2
@@ -209,7 +224,8 @@ end
                 elseif player.health_point + 500 >= player.max_health_point then
 
                     player.health_point = player.max_health_point
-                    nbr_item.hp20 = nbr_item.hp500 - 1 
+                    nbr_item.hp500 = nbr_item.hp500 -1 
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player HP +500"
                     delay_s(0.9)
                     my_turn = 2
@@ -246,6 +262,7 @@ end
 
                     player.magic_point = math.floor((player.magic_point + 20))
                     nbr_item.mp20 = nbr_item.mp20 - 1
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player TP +20"
                     delay_s(0.9)
                     my_turn = 2    
@@ -254,6 +271,7 @@ end
 
                     player.magic_point = player.max_magic_point
                     nbr_item.mp20 = nbr_item.mp20 - 1
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player TP +20"
                     delay_s(0.9)
                     my_turn = 2
@@ -289,6 +307,7 @@ end
 
                     player.magic_point = math.floor((player.magic_point + 150))
                     nbr_item.mp150 = nbr_item.mp150 - 1
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player TP +150"
                     delay_s(0.9)
                     my_turn = 2    
@@ -297,6 +316,7 @@ end
 
                     player.magic_point = player.max_magic_point
                     nbr_item.mp150 = nbr_item.mp150 - 1
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player TP +150"
                     delay_s(0.9)
                     my_turn = 2
@@ -333,6 +353,7 @@ end
 
                     player.magic_point = math.floor((player.magic_point + 250))
                     nbr_item.mp250 = nbr_item.mp250 - 1
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player TP +250"
                     delay_s(0.9)
                     my_turn = 2    
@@ -341,6 +362,7 @@ end
 
                     player.magic_point = player.max_magic_point
                     nbr_item.mp250 = nbr_item.mp250 - 1
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player TP +250"
                     delay_s(0.9)
                     my_turn = 2
@@ -377,6 +399,7 @@ end
 
                     player.magic_point = math.floor((player.magic_point + 300))
                     nbr_item.mp300 = nbr_item.mp300 - 1
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player TP +300"
                     delay_s(0.9)
                     my_turn = 2    
@@ -385,6 +408,7 @@ end
 
                     player.magic_point = player.max_magic_point
                     nbr_item.mp300 = nbr_item.mp300 - 1
+                    trophee.food_addict = trophee.food_addict + 1
                     ui_text.action = "Player TP +300"
                     delay_s(0.9)
                     my_turn = 2
@@ -436,7 +460,6 @@ end
                 
         end
 
-        
     end
 
     function use_gift(dt) -- Revenir pour bien faire le choix du cadeau
@@ -507,6 +530,4 @@ function draw_Inventory()
 
     love.graphics.setColor(1, 1, 1)
 
-
-    
 end

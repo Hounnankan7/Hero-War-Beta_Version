@@ -13,26 +13,573 @@
 ---------------------------------------------------------------------------------------------
 --FONCTIONS D'UTILISATION DES SKILLS
     function player_Normal_Attack(dt) -- Fonction utilisation d'une attaque normale
+
+        if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+
+            trophee.lucky_man = trophee.lucky_man + 1
+
+            damage_to_ennemy = (player.attack_point * (100/(100 + ennemie.defense_point)))
+            ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+            ui_text.action = "Player deal "..damage_to_ennemy.." damage to Ennemy"
+            delay_s(0.8)  
+            my_turn = 2
+
+        elseif ennemie.health_point <= 0 then
+
+        end
         
     end
 
     function player_Use_Skill_1(dt, choix_character) -- Fonction d'utilisation du skill 1 
+
+        if choix_character == 1 then
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 15 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 15) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 15))
+                    ui_text.action = "Player use "..ui_action.skill_1_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 15 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+        
+        elseif choix_character == 2 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 15 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 15) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 15))
+                    ui_text.action = "Player use "..ui_action.skill_1_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 15 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 3 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 15 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 15) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 15))
+                    ui_text.action = "Player use "..ui_action.skill_1_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 15 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 4 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 15 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 15) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 15))
+                    ui_text.action = "Player use "..ui_action.skill_1_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 15 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 5 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 15 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 15) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 15))
+                    ui_text.action = "Player use "..ui_action.skill_1_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 15 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 6 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 15 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 15) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 15))
+                    ui_text.action = "Player use "..ui_action.skill_1_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 15 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+   
+        end
         
     end
 
     function player_Use_Skill_2(dt, choix_character) -- Fonction d'utilisation du skill 2
+
+        if choix_character == 1 then
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 30 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 18) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 30))
+                    ui_text.action = "Player use "..ui_action.skill_2_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 30 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+        
+        elseif choix_character == 2 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 30 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 18) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 30))
+                    ui_text.action = "Player use "..ui_action.skill_2_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 30 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 3 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 30 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 18) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 30))
+                    ui_text.action = "Player use "..ui_action.skill_2_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 30 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 4 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 30 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 18) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 30))
+                    ui_text.action = "Player use "..ui_action.skill_2_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 30 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 5 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 30 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 18) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 30))
+                    ui_text.action = "Player use "..ui_action.skill_2_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 30 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 6 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 30 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 18) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 30))
+                    ui_text.action = "Player use "..ui_action.skill_2_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 30 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+   
+        end
         
     end
 
     function player_Use_Skill_3(dt, choix_character) -- Fonction d'utilisation du skill 3
+
+        if choix_character == 1 then
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 100 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 20) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 100))
+                    ui_text.action = "Player use "..ui_action.skill_3_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 100 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+        
+        elseif choix_character == 2 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 100 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 20) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 100))
+                    ui_text.action = "Player use "..ui_action.skill_3_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 100 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 3 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 100 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 20) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 100))
+                    ui_text.action = "Player use "..ui_action.skill_3_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 100 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 4 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 100 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 20) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 100))
+                    ui_text.action = "Player use "..ui_action.skill_3_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 100 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 5 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 100 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 20) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 100))
+                    ui_text.action = "Player use "..ui_action.skill_3_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 100 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 6 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 100 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 20) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 100))
+                    ui_text.action = "Player use "..ui_action.skill_3_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 100 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+   
+        end
         
     end
 
     function player_Use_Skill_4(dt, choix_character) -- Fonction d'utilisation du skill 4
+
+        if choix_character == 1 then
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 150 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 24) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 150))
+                    ui_text.action = "Player use "..ui_action.skill_4_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 150 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+        
+        elseif choix_character == 2 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 150 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 24) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 150))
+                    ui_text.action = "Player use "..ui_action.skill_4_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 150 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 3 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 150 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 24) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 150))
+                    ui_text.action = "Player use "..ui_action.skill_4_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 150 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 4 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 150 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 24) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 150))
+                    ui_text.action = "Player use "..ui_action.skill_4_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 150 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 5 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 150 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 24) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 150))
+                    ui_text.action = "Player use "..ui_action.skill_4_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 150 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+
+        elseif choix_character == 6 then
+
+            if ennemie.health_point >= 1 and ennemie.health_point <= ennemie.max_health_point then
+                if player.magic_point >= 150 then -- Condition sur la possession des mp necessaire à l'atk
+
+                    damage_to_ennemy = ((player.attack_point + 24) * (100/(100 + ennemie.defense_point)))
+                    ennemie.health_point = math.floor((ennemie.health_point - damage_to_ennemy))
+                    player.magic_point = math.floor((player.magic_point - 150))
+                    ui_text.action = "Player use "..ui_action.skill_4_name.." to deal "..damage_to_ennemy.." damage to Ennemy"
+                    delay_s(0.8)  
+                    my_turn = 2
+                    
+                elseif player.magic_point < 150 then
+                    ui_text.action = "Vous n'avez pas assez de TP pour cette attaque"
+                end
+
+            elseif ennemie.health_point <= 0 then
+                
+                
+            end
+   
+        end
         
     end
 
     function player_Use_Defend(dt) -- Player utilise defense pour augmenter de 5 ca defense
+
+        if player.defense_point < player.max_defense_point then
+
+            if player.defense_point + 5 < player.max_defense_point then
+
+                player.defense_point = math.floor((player.defense_point + 5))
+                ui_text.action = "Player defence + 5"
+                delay_s(0.5) 
+                my_turn = 2
+
+            elseif player.defense_point + 10 >= player.max_defense_point then
+
+                player.defense_point = player.max_defense_point
+                ui_text.action = "Player defence + 10 and is at max"
+                delay_s(0.5) 
+                my_turn = 2
+
+            end
+
+        elseif player.defense_point >= player.max_defense_point then
+
+            player.defense_point = player.max_defense_point
+            ui_text.action = "Player defence is already at max"
+            
+        end
         
     end
 ---------------------------------------------------------------------------------------------
@@ -48,10 +595,10 @@ function skill_Update()
         ui_action.skill_2_name = "AURA SWORD"
         ui_action.skill_3_name = "SUPER AURA SWORD"
         ui_action.skill_4_name = "PRIME CIRCLE SWORD"
-        ui_action.consoTP_1 = "-50TP"
-        ui_action.consoTP_2 = ""
-        ui_action.consoTP_3 = ""
-        ui_action.consoTP_4 = ""
+        ui_action.consoTP_1 = "-15TP"
+        ui_action.consoTP_2 = "-30TP"
+        ui_action.consoTP_3 = "-100TP"
+        ui_action.consoTP_4 = "-150TP"
     elseif choix_character == 2 then
         ui_action.skill_1 = love.graphics.newImage("assets/icons/actions/spearman_skill/skill_1.png")
         ui_action.skill_2 = love.graphics.newImage("assets/icons/actions/spearman_skill/skill_2.png")

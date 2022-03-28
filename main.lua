@@ -9,6 +9,7 @@
     require "scripts/inventaire"
     require "scripts/combat"
     require "scripts/skill"
+    require "scripts/level_Up_Sytem"
     require "math"
 
 
@@ -42,7 +43,7 @@
         EnnemyCreation()
         --var choix d'action de l'ennemy---
         c = 1
-        d = 8
+        d = 15
         action_choice = 1
         ----------------------
         --------------------------------------------------
@@ -60,6 +61,10 @@
         exitGame(choix_UI)
 
         choix_UI = manipulationInterface(choix_UI, dt) -- Réaction en fonction des boutons cliqués
+
+        trophee_Update()
+
+        victory()
 
         inventory_Update(dt)
 

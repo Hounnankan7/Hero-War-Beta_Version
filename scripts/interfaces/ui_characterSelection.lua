@@ -187,6 +187,10 @@
             -- Conversion pixer vers cases de la grille
             mousePosX = math.floor((x/16)+1)
             mousePosY = math.floor((y/16)+1)
+
+            battle_number = 1
+            trophee.section_number = trophee.section_number + 1
+
             if mousePosY >= 8 and mousePosY <= 22 and mousePosX >= 3 and mousePosX <= 21 then
 
                 choix_character = 1

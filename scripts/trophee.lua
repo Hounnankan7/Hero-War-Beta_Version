@@ -13,6 +13,7 @@
 
     function trophee_Init()
         
+        battle_number = 1
 
         --Nombres pour Trophees
             trophee = {}
@@ -88,7 +89,29 @@
 
     function calcul_trophee_slayer() -- LES FONCTIONS DE CALCUL DE TROPHEE
 
-        ---- REVENIR FAIRE
+        if choix_UI == 4 then
+            
+            trophee.kill_number = trophee.kill_number + 1
+
+            if monster_choice >= 1 and monster_choice <= 5 or monster_choice >= 23 and monster_choice <= 26 then
+                trophee.swordman_slayer = trophee.swordman_slayer + 1
+            elseif monster_choice >= 6 and monster_choice <= 10 or monster_choice >= 27 and monster_choice <= 30 then
+                trophee.spearman_slayer = trophee.spearman_slayer + 1
+            elseif monster_choice >= 11 and monster_choice <= 14 or monster_choice >= 31 and monster_choice <= 34 then
+                trophee.gunner_slayer = trophee.gunner_slayer + 1
+            elseif monster_choice >= 19 and monster_choice <= 22 or monster_choice >= 43 and monster_choice <= 46 or monster_choice >= 51 and monster_choice <= 54 then
+                trophee.cavalier_slayer = trophee.cavalier_slayer + 1
+            elseif monster_choice >= 47 and monster_choice <= 78 then
+                trophee.legendary_slayer = trophee.legendary_slayer + 1
+            elseif monster_choice >= 79 and monster_choice <= 86 or monster_choice >= 91 and monster_choice <= 95 then
+                trophee.mystic_slayer = trophee.mystic_slayer + 1
+            elseif monster_choice >= 87 and monster_choice <= 90 or monster_choice >= 96 and monster_choice <= 100 then
+                trophee.emperor_slayer = trophee.emperor_slayer + 1
+            end
+
+        elseif choix_UI == 5 then
+            trophee.death_number = trophee.death_number + 1
+        end
         
     end
 
