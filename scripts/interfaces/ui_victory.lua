@@ -90,9 +90,9 @@
 
                     inventory_Init()
                     trophee.death_number = trophee.death_number + 1
-                    PlayerCreation()
+                    PlayerCreation(choix_character)
                     monster_choice = randomNumber(a, b)
-                    EnnemyCreation()
+                    EnnemyCreation(monster_choice)
                     delay_s(2)
                     choix_UI = 2
 
@@ -100,9 +100,9 @@
 
                     inventory_Init()
                     trophee.death_number = trophee.death_number + 1
-                    PlayerCreation()
+                    PlayerCreation(choix_character)
                     monster_choice = randomNumber(a, b)
-                    EnnemyCreation()
+                    EnnemyCreation(monster_choice)
                     delay_s(2)
                     choix_UI = 1
 
@@ -136,7 +136,7 @@
                     battle_number = battle_number + 1
                     calcul_trophee_slayer()
                     monster_choice = randomNumber(a, b)
-                    EnnemyCreation()
+                    EnnemyCreation(monster_choice)
                     delay_s(2)
                     choix_UI = 3
 
@@ -145,7 +145,7 @@
                     inventory_Init()
                     calcul_trophee_slayer()
                     monster_choice = randomNumber(a, b)
-                    EnnemyCreation()
+                    EnnemyCreation(monster_choice)
                     delay_s(2)
                     choix_UI = 1
 

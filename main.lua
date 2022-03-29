@@ -10,7 +10,9 @@
     require "scripts/combat"
     require "scripts/skill"
     require "scripts/level_Up_Sytem"
+    require "scripts/Sauvegarde"
     require "math"
+    lume = require "library/lume"
 
 
 ----------------------------------------------------
@@ -19,44 +21,48 @@
 
     function love.load(...) --Fonction d'initialisation des éléments
 
-        choix_UI = 1 --Choix interface
-        interface_state = "" -- State pour manipuler l'inventaire et les skills
 
-         -- var pour le tour par tour du combat
-         i = 1
-         j = 2
-         my_turn = 1
-         --randomNumber(i, j)
-         ----------------------------------------
 
+            -- var pour le tour par tour du combat
+        i = 1
+        j = 2
+        my_turn = randomNumber(i, j)
+        ----------------------------------------
 
         -- Creation du player par défaut en arrière plan
         choix_character = 1
-        PlayerCreation()
+        PlayerCreation(choix_character)
         ----------------------
-
 
         --Creation de l'ennemy par défaut en arrière plan
         a = 1
         b = 100
         monster_choice = randomNumber(a, b)
-        EnnemyCreation()
+        EnnemyCreation(monster_choice)
         --var choix d'action de l'ennemy---
         c = 1
         d = 15
         action_choice = 1
-        ----------------------
+        ------------------------------------
         --------------------------------------------------
 
         inventory_Init()
 
 
         interface_init() -- Initialisation des menus
+            
+
+
+
+            
+
 
     end
 
 
     function love.update(dt) --Fonction LOve2D en execution tout le temps
+
+        --Load_Game() -- Initialisation de la partie sauvegarde
 
         exitGame(choix_UI)
 

@@ -194,8 +194,8 @@
             if mousePosY >= 8 and mousePosY <= 22 and mousePosX >= 3 and mousePosX <= 21 then
 
                 choix_character = 1
-                PlayerCreation()
-                EnnemyCreation()
+                PlayerCreation(choix_character)
+                EnnemyCreation(monster_choice)
                 interface_state = "in_combat"
                 skill_Update()
                 interface_choice = 3
@@ -204,8 +204,8 @@
             elseif mousePosY >= 8 and mousePosY <= 22 and mousePosX >= 23 and mousePosX <= 41 then
 
                 choix_character = 2
-                PlayerCreation()
-                EnnemyCreation()
+                PlayerCreation(choix_character)
+                EnnemyCreation(monster_choice)
                 interface_state = "in_combat"
                 skill_Update()
                 interface_choice = 3
@@ -214,8 +214,8 @@
             elseif mousePosY >= 8 and mousePosY <= 22 and mousePosX >= 43 and mousePosX <= 61 then
 
                 choix_character = 3
-                PlayerCreation()
-                EnnemyCreation()
+                PlayerCreation(choix_character)
+                EnnemyCreation(monster_choice)
                 interface_state = "in_combat"
                 skill_Update()
                 interface_choice = 3
@@ -224,8 +224,8 @@
             elseif mousePosY >= 24 and mousePosY <= 38 and mousePosX >= 3 and mousePosX <= 21 then
 
                 choix_character = 4
-                PlayerCreation()
-                EnnemyCreation()
+                PlayerCreation(choix_character)
+                EnnemyCreation(monster_choice)
                 interface_state = "in_combat"
                 skill_Update()
                 interface_choice = 3
@@ -234,8 +234,8 @@
             elseif mousePosY >= 24 and mousePosY <= 38 and mousePosX >= 23 and mousePosX <= 41 then
 
                 choix_character = 5
-                PlayerCreation()
-                EnnemyCreation()
+                PlayerCreation(choix_character)
+                EnnemyCreation(monster_choice)
                 interface_state = "in_combat"
                 skill_Update()
                 interface_choice = 3
@@ -244,8 +244,8 @@
             elseif mousePosY >= 24 and mousePosY <= 38 and mousePosX >= 43 and mousePosX <= 61 then
 
                 choix_character = 6
-                PlayerCreation()
-                EnnemyCreation()
+                PlayerCreation(choix_character)
+                EnnemyCreation(monster_choice)
                 interface_state = "in_combat"
                 skill_Update()
                 interface_choice = 3

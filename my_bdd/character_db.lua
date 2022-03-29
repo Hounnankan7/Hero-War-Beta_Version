@@ -60,7 +60,6 @@
             character.max_level = 100
             character.exp_actuel = 0
             character.exp_next_level = math.floor( (const_2 * math.sqrt(character.level)) + const_1  )
-    
 
         elseif db_character_choice == 2 then --Choix du SPEARMAN
 
@@ -81,7 +80,6 @@
             character.exp_actuel = 0
             character.exp_next_level = math.floor( (const_2 * math.sqrt(character.level)) + const_1  )
 
-
         elseif db_character_choice == 3 then -- Choix du GUNNER
 
             character.id = 3 
@@ -100,7 +98,6 @@
             character.max_level = 100
             character.exp_actuel = 0
             character.exp_next_level = math.floor( (const_2 * math.sqrt(character.level)) + const_1  )
-    
 
         elseif db_character_choice == 4 then -- Choix du NINJA
 
@@ -121,7 +118,6 @@
             character.exp_actuel = 0
             character.exp_next_level = math.floor( (const_2 * math.sqrt(character.level)) + const_3  )
 
-
         elseif db_character_choice == 5 then -- Choix du SAMOURAI
 
             character.id = 5 
@@ -141,7 +137,6 @@
             character.exp_actuel = 0
             character.exp_next_level = math.floor( (const_2 * math.sqrt(character.level)) + const_3  )
 
-
         elseif db_character_choice == 6 then -- Choix du SPIRITUALIST
 
             character.id = 6 
@@ -160,7 +155,6 @@
             character.max_level = 100
             character.exp_actuel = 0
             character.exp_next_level = math.floor( (const_2 * math.sqrt(character.level)) + const_3  )
-
 
         end
     

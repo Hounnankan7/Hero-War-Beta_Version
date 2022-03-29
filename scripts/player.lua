@@ -14,7 +14,7 @@
 
 --MES FONCTIONS CREES------------------------------------------------------------------------
 
-function PlayerCreation() --Fonction d'initialisation du perso du player
+function PlayerCreation(choix_character) --Fonction d'initialisation du perso du player
     
     CharacterSelection(choix_character)
     player = {}

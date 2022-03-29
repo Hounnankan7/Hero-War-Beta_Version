@@ -3,6 +3,9 @@
     mapTileSizeH = 16
     tileSize = 16
 
+    characterSizeW = 0
+    characterSizeH = 0
+
 --Fonts-----------------------------------------
     font_main_size = 60
     font_second_size = 20

@@ -14,7 +14,7 @@ damage_to_player = 0
 
 --MES FONCTIONS CREES------------------------------------------------------------------------
 
-    function EnnemyCreation() --Fonction d'initialisation du perso du player
+    function EnnemyCreation(monster_choice) --Fonction d'initialisation du perso du player
 
         if player.level >= 1 and player.level <= 15 then 
             a = 1

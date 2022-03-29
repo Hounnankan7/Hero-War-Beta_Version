@@ -44,6 +44,7 @@ function EnCombat(dt) -- Function exécuter pendant le combat
         elseif mousePosY_1 >= 40 and mousePosY_1 <= 42 and mousePosX_1 >= 48 and mousePosX_1 <= 50 then -- Player Run
 
             trophee.run_number = trophee.run_number + 1
+            Save_Game()
             choix_UI = 1 -- Retour vers l'écran principal avec perte de la progression
 
         elseif mousePosY_1 >= 40 and mousePosY_1 <= 42 and mousePosX_1 >= 14 and mousePosX_1 <= 16 then -- Appui sur HP+
