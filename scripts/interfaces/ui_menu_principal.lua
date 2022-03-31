@@ -56,7 +56,7 @@
 
             if mousePosY >= 17 and mousePosY <= 20 and mousePosX >= 16 and mousePosX <= 41 then -- Clique sur Nouvelle bataille
                 
-                love.filesystem.remove("sauvegarde.txt")
+                love.filesystem.remove("saveData.ini")
                 interface_choice = 2
                 delay_s(1.1)
 
@@ -65,7 +65,7 @@
                 Load_Game()
                 interface_choice = 3
                 interface_state = "in_combat"
-                delay_s(1.1)
+                delay_s(0.9)
 
             elseif mousePosY >= 25 and mousePosY <= 28 and mousePosX >= 16 and mousePosX <= 41 then -- Clique sur Trophees
 

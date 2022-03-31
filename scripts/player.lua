@@ -21,6 +21,7 @@ function PlayerCreation(choix_character) --Fonction d'initialisation du perso du
     player.id = character.id 
     player.class = character.class
     player.name = character.name
+    player.liens = character.liens
     player.image = character.image
     player.max_health_point = character.max_health_point
     player.health_point = character.health_point

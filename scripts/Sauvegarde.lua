@@ -2,133 +2,112 @@
 	--Exemple: require "nom_du_fichier"
     require "settings"
     require "my_bdd/ennemies_db"
+    LIP = require "library/LIP"
+
 
 
 --LES VARIABLES------------------------------------------------------------------------------
 
 
+load_Data = {}
 ---------------------------------------------------------------------------------------------
 
 
 function Save_Game()
 
-    save_Data = {}
+    save_Data = {
 
-    -- Player sauvegarde
-    save_Data.player = {
+        -- PLAYER
+        Player = 
+        {
+            choix_character,
+            player.id,
+            player.class,
+            player.name,
+            player.liens,
+            player.image,
+            player.max_health_point,
+            player.health_point,
+            player.magic_point,
+            player.max_magic_point,
+            player.attack_point,
+            player.max_attack_point,
+            player.defense_point,
+            player.max_defense_point,
+            player.level ,
+            player.max_level,
+            player.exp_actuel,
+            player.exp_next_level,
+        },
+
+        -- MONSTER
+        Monster =
+        {
+            monster_choice,
+            ennemie.id,
+            ennemie.image,
+            ennemie.name,
+            ennemie.health_point,
+            ennemie.max_health_point,
+            ennemie.magic_point,
+            ennemie.max_magic_point,
+            ennemie.attack_point,
+            ennemie.max_attack_point,
+            ennemie.defense_point,
+            ennemie.max_defense_point,
+            ennemie.exp_loot,
+        },
         
-        character = choix_character,
-        health_point = player.health_point,
-        max_health_point = player.max_health_point,
-        magic_point = player.magic_point,
-        max_magic_point = player.max_magic_point,
-        attack_point = player.attack_point,
-        max_attack_point = player.max_attack_point,
-        defense_point = player.defense_point,
-        max_defense_point = player.max_defense_point,
-        level = player.level,
-        max_level = player.max_level,
-        exp_actuel = player.exp_actuel,
-        exp_next_level = player.exp_next_level
 
     }
-
-    --Ennemy sauvegarde
-    save_Data.ennemie = {
-
-        monster = monster_choice,
-        ennemie_health_point = ennemie.health_point,
-        ennemie_max_health_point = ennemie.max_health_point,
-        ennemie_magic_point = ennemie.magic_point,
-        ennemie_max_magic_point = ennemie.max_magic_point,
-        ennemie_attack_point = ennemie.attack_point,
-        ennemie_max_attack_point = ennemie.max_attack_point,
-        ennemie_defense_point = ennemie.defense_point,
-        ennemie_max_defense_point = ennemie.max_defense_point,
-
-    }
-
-    --Inventaire sauvegarde
-    save_Data.inventory = {
-
-        item_hp20 = nbr_item.hp20,
-        item_hp200 = nbr_item.hp200,
-        item_hp300 = nbr_item.hp300,
-        item_hp500 = nbr_item.hp500,
-        item_mp20 = nbr_item.mp20,
-        item_mp150 = nbr_item.mp150,
-        item_mp200 = nbr_item.mp200,
-        item_mp250 = nbr_item.mp250,
-        item_mp300 = nbr_item.mp300,
-        item_stone = nbr_item.stone,
-        item_gift = nbr_item.gift
-
-    }
-
-    serialized = lume.serialize(save_Data)
-    love.filesystem.write("sauvegarde.txt", serialized)
-    print(serialized)
+    
+    -- Data saving
+    love.filesystem.remove("saveData.ini")
+    LIP.save('saveData.ini', save_Data)
     
 end
 
 function Load_Game()  
 
-    file = love.filesystem.read("sauvegarde.txt")
-    save_Data = lume.deserialize(file)
+    load_Data = LIP.load('saveData.ini')
 
-    --Load Player
-    choix_character = save_Data.player.character
+    -- Player Load
+    choix_character = load_Data.Player[1]
     PlayerCreation(choix_character)
-    player.health_point = save_Data.player.health_point
-    player.max_health_point = save_Data.player.max_health_point
-    player.magic_point = save_Data.player.magic_point
-    player.max_magic_point = save_Data.player.max_magic_point
-    player.attack_point = save_Data.player.attack_point
-    player.max_attack_point = save_Data.player.max_attack_point
-    player.defense_point = save_Data.player.defense_point
-    player.max_defense_point = save_Data.player.max_defense_point
-    player.level = save_Data.player.level
-    player.max_level = save_Data.player.max_level
-    player.exp_actuel = save_Data.player.exp_actuel
-    player.exp_next_level = save_Data.player.exp_next_level
+    player.max_health_point = load_Data.Player[7]
+    player.health_point = load_Data.Player[8]
+    player.magic_point = load_Data.Player[9]
+    player.max_magic_point = load_Data.Player[10]
+    player.attack_point = load_Data.Player[11]
+    player.max_attack_point = load_Data.Player[12]
+    player.defense_point = load_Data.Player[13]
+    player.max_defense_point = load_Data.Player[14]
+    player.level = load_Data.Player[15]
+    player.max_level = load_Data.Player[16]
+    player.exp_actuel = load_Data.Player[17]
+    player.exp_next_level = load_Data.Player[18]
+    
+    print(choix_character)
+    print(player.health_point)
 
+    -- Ennemy Load
+    monster_choice = load_Data.Monster[2]
+    save_ennemy_Creation(load_Data.Monster[2])
+    ennemie.health_point = load_Data.Monster[5]
+    ennemie.max_health_point = load_Data.Monster[6]
+    ennemie.magic_point = load_Data.Monster[7]
+    ennemie.max_magic_point = load_Data.Monster[8]
+    ennemie.attack_point = load_Data.Monster[9]
+    ennemie.max_attack_point = load_Data.Monster[10]
+    ennemie.defense_point = load_Data.Monster[11]
+    ennemie.max_defense_point = load_Data.Monster[12]
+    ennemie.exp_loot = load_Data.Monster[13]
 
-    --Load Ennemie
-    monster_choice = save_Data.ennemie.monster
-    create_Monster(monster_choice)
-    ennemie.health_point = save_Data.ennemie.ennemie_health_point
-    ennemie.max_health_point = save_Data.ennemie.ennemie_max_health_point
-    ennemie.magic_point = save_Data.ennemie.ennemie_magic_point
-    ennemie.max_magic_point = save_Data.ennemie.ennemie_max_magic_point
-    ennemie.attack_point = save_Data.ennemie.ennemie_attack_point
-    ennemie.max_attack_point = save_Data.ennemie.ennemie_max_attack_point
-    ennemie.defense_point = save_Data.ennemie.ennemie_defense_point
-    ennemie.max_defense_point = save_Data.ennemie.ennemie_max_defense_point
-
-    --Load Inventaire
-    nbr_item.hp20 = save_Data.inventory.item_hp20 
-    nbr_item.hp200 = save_Data.inventory.item_hp200
-    nbr_item.hp300 = save_Data.inventory.item_hp300
-    nbr_item.hp500 = save_Data.inventory.item_hp500
-    nbr_item.mp20 = save_Data.inventory.item_mp20
-    nbr_item.mp150 = save_Data.inventory.item_mp150
-    nbr_item.mp250 = save_Data.inventory.item_mp250
-    nbr_item.mp300 = save_Data.inventory.item_mp300
-    nbr_item.stone = save_Data.inventory.item_stone
-    nbr_item.gift = save_Data.inventory.item_gift
+    print(monster_choice)
+    print(ennemie.health_point)
     
 end
 
-function is_Save_Exist()
-    if love.filesystem.getInfo("sauvegarde.txt") then
-
-        --print(file)
-
-    else
-       
-        
-    end
-end
 
 function Reload_All_Game()
 

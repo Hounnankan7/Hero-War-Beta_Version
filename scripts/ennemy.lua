@@ -64,6 +64,24 @@ damage_to_player = 0
         
     end
 
+    function save_ennemy_Creation(monster_choice)
+        create_Monster(monster_choice)
+
+        ennemie = {}
+        ennemie.id = monster.id
+        ennemie.image = monster.image
+        ennemie.name = monster.name
+        ennemie.health_point = monster.health_point
+        ennemie.max_health_point = monster.max_health_point
+        ennemie.magic_point = monster.magic_point
+        ennemie.max_magic_point = monster.max_magic_point
+        ennemie.attack_point = monster.attack_point
+        ennemie.max_attack_point = monster.max_attack_point
+        ennemie.defense_point = monster.defense_point
+        ennemie.max_defense_point = monster.max_defense_point
+        ennemie.exp_loot = monster.exp_loot
+    end
+
 
 
     function EnnemyDraw() --Fonction pour dessiner le perso du player

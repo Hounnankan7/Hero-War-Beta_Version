@@ -47,6 +47,7 @@
             character.id = 1 
             character.class = "Swordman"
             character.name = "Motoyasu Matsudaira"
+            character.liens = "my_bdd/characters/Swordman.png"
             character.image = love.graphics.newImage("my_bdd/characters/Swordman.png")
             character.health_point = 100   
             character.max_health_point = 100
@@ -66,6 +67,7 @@
             character.id = 2 
             character.class = "Spearman"
             character.name = "Matabei Goto"
+            character.liens = "my_bdd/characters/Spearman.png"
             character.image = love.graphics.newImage("my_bdd/characters/Spearman.png")
             character.health_point = 100   
             character.max_health_point = 100
@@ -85,6 +87,7 @@
             character.id = 3 
             character.class = "Gunner"
             character.name = "Takahisa Shimazu"
+            character.liens = "my_bdd/characters/Gunner.png"
             character.image = love.graphics.newImage("my_bdd/characters/Gunner.png")
             character.health_point = 100   
             character.max_health_point = 100
@@ -104,6 +107,7 @@
             character.id = 4 
             character.class = "Ninja"
             character.name = "Kotaro Fuma"
+            character.liens = "my_bdd/characters/Ninja.png"
             character.image = love.graphics.newImage("my_bdd/characters/Ninja.png")
             character.health_point = 100   
             character.max_health_point = 100
@@ -123,6 +127,7 @@
             character.id = 5 
             character.class = "Samourai"
             character.name = "Masamune Date"
+            character.liens = "my_bdd/characters/Samurai.png"
             character.image = love.graphics.newImage("my_bdd/characters/Samurai.png")
             character.health_point = 100   
             character.max_health_point = 100
@@ -142,6 +147,7 @@
             character.id = 6 
             character.class = "Spiritualist"
             character.name = "Nankobo Tenkai"
+            character.liens = "my_bdd/characters/Spiritualist.png"
             character.image = love.graphics.newImage("my_bdd/characters/Spiritualist.png")
             character.health_point = 100   
             character.max_health_point = 100

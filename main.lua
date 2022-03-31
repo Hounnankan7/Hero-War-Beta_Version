@@ -11,8 +11,7 @@
     require "scripts/skill"
     require "scripts/level_Up_Sytem"
     require "scripts/Sauvegarde"
-    require "math"
-    lume = require "library/lume"
+    require "math"    
 
 
 ----------------------------------------------------
@@ -21,9 +20,9 @@
 
     function love.load(...) --Fonction d'initialisation des éléments
 
+        choix_UI = 1
 
-
-            -- var pour le tour par tour du combat
+        -- var pour le tour par tour du combat
         i = 1
         j = 2
         my_turn = randomNumber(i, j)
@@ -49,12 +48,9 @@
         inventory_Init()
 
 
+
         interface_init() -- Initialisation des menus
-            
-
-
-
-            
+        
 
 
     end
