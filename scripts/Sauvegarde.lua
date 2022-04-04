@@ -105,6 +105,7 @@ function Load_Game()
 
     print(monster_choice)
     print(ennemie.health_point)
+
     
 end
 

@@ -467,6 +467,13 @@ end
         if nbr_item.gift >= 1 then
 
             gift_choice = randomNumber(1, 2)
+            if gift_choice == 1 then
+                nbr_item.hp20 = nbr_item.hp20 + 1
+            elseif gift_choice == 2 then
+                nbr_item.hp20 = nbr_item.hp20 + 2
+            end
+            nbr_item.gift = nbr_item.gift - 1
+            delay_s(0.9)
             
         elseif nbr_item.gift <= 0 then
 

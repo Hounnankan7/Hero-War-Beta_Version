@@ -62,10 +62,15 @@
 
             elseif mousePosY >= 21 and mousePosY <= 24 and mousePosX >= 16 and mousePosX <= 41 then -- Clique sur Dernière bataille
                 
-                Load_Game()
-                interface_choice = 3
-                interface_state = "in_combat"
-                delay_s(0.9)
+                if love.filesystem.getInfo("saveData.ini") then
+
+                    Load_Game()
+                    interface_choice = 3
+                    interface_state = "in_combat"
+                    delay_s(0.9)
+                else
+            
+                end
 
             elseif mousePosY >= 25 and mousePosY <= 28 and mousePosX >= 16 and mousePosX <= 41 then -- Clique sur Trophees
 
