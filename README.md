@@ -1,5 +1,5 @@
 # Hero-War-II
-Version 1.1 of the text based fighting game between heroes from legend, and developped in Lua and LOVE 2D framework.
+Prototype of a text based fighting game between heroes from legend, and developped in Lua and LOVE 2D framework for a bigger project.
 
 # Systèmes Implémentés
 
