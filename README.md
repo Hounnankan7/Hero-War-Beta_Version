@@ -16,6 +16,7 @@ Prototype of a click based fighting game between heroes from legend, and develop
 ![Screenshot](assets/readme_image/battle1.PNG)
 ![Screenshot](assets/readme_image/battle2.PNG)
 
+# Systèmes à Implémentés
 
 + Un système de loot en cas de victoire :
 
