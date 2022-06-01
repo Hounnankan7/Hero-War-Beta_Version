@@ -22,6 +22,6 @@ Prototype of a click based fighting game between heroes from legend, and develop
 
 ![Screenshot](assets/readme_image/loot_system.PNG)
 
-+ Une liste fixe de badge prise en compte pour la section de fenetre en cours :
++ Une liste fixe de badge à débloquer :
 
 ![Screenshot](assets/readme_image/trophy.PNG)
