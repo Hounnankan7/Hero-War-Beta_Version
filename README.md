@@ -1,4 +1,4 @@
-#To try the game
+# To try the game
 To play the prototype you just need to download the HeroWar.zip file, extract the content and run the .exe file in it.
 
 # Hero-War-II
